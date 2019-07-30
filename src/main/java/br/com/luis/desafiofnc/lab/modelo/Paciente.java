@@ -1,11 +1,20 @@
 package br.com.luis.desafiofnc.lab.modelo;
 
+//import java.util.ArrayList;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
+//import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+//import javax.persistence.OneToMany;
 import javax.persistence.Table;
+
+//import org.hibernate.annotations.Cascade;
+//import org.hibernate.annotations.CascadeType;
+//import org.hibernate.annotations.Fetch;
+//import org.hibernate.annotations.FetchMode;
 
 @Entity
 @Table(name = "paciente")
@@ -25,7 +34,10 @@ public class Paciente {
 	@Column
 	private String cpf;
 	
-//	@Column
+//	@Column(name = "exame")
+//	@OneToMany(mappedBy="exame", fetch=FetchType.EAGER)
+//	@Fetch(FetchMode.JOIN)
+//	@Cascade(CascadeType.ALL)
 //	private ArrayList<Exame> exames;
 
 	public Long getId() {
